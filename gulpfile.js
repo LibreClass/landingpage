@@ -76,5 +76,5 @@ gulp.task('dev', ['browserSync', 'minify-css', 'minify-js', 'copy'], function() 
     gulp.watch('*.html', browserSync.reload);
 });
 
-// gulp.task('default', ['minify-c'dev'ss', 'minify-js', 'copy']);
+gulp.task('default', ['minify-css', 'minify-js', 'copy']);
 gulp.task('default', ['dev']);
