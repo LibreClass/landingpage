@@ -77,4 +77,4 @@ gulp.task('dev', ['browserSync', 'stylus', 'minify-js', 'copy'], function() {
 });
 
 gulp.task('default', ['stylus', 'minify-js', 'copy']);
-// gulp.task('default', ['dev']);
+gulp.task('dev', ['dev']);
