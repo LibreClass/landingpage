@@ -1,22 +1,24 @@
-# LibreClass Community Edition - Landingpage
+# libreclass-lp-v2
 
-> Este projeto contém a landingpage do site [http://www.libreclass.org](http://www.libreclass.org).
-
-## Instalação
-
-#### 1. Instale o yarn:
+## Project setup
 ```
-$ sudo apt-get update && sudo apt-get install yarn
+npm install
 ```
 
-#### 2. Execute o yarn para baixar as dependências
+### Compiles and hot-reloads for development
 ```
-$ yarn
-```
-
-#### 3. Execute o gulp
-```
-$ gulp
+npm run serve
 ```
 
-Pronto! Nesta etapa a landingpage deve estar com todos os arquivos compilados e todas as suas dependências instaladas.
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
