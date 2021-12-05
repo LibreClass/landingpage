@@ -1,16 +1,19 @@
 <template>
   <div class="container" id="app">
     <FirstFold />
+	<WhatWeDo />
   </div>
 </template>
 
 <script>
-import FirstFold from './components/FirstFold.vue'
+import FirstFold from './components/FirstFold.vue';
+import WhatWeDo from './components/WhatWeDo.vue';
 
 export default {
   name: 'App',
   components: {
     FirstFold,
+	WhatWeDo,
   }
 }
 </script>
@@ -47,10 +50,6 @@ body {
 	line-height: 1;
 }
 
-ol, ul {
-	list-style: none;
-}
-
 blockquote, q {
 	quotes: none;
 }
@@ -66,7 +65,8 @@ table {
 	border-spacing: 0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Poppins:ital,wght@0,400;0,500;1,200&display=swap');
+
 
 body { 
 	font-family: 'Poppins';
@@ -81,5 +81,29 @@ a {
 	.container {
 		min-width: 1340px;
 	}
+}
+
+h1 {
+    color: rgba(28, 51, 74, 1);
+    font-family: 'Libre Baskerville', serif;
+    font-size: 44px;
+	line-height: 52px;
+}
+
+h2 {
+    color: rgba(28, 51, 74, 1);
+    font-family: 'Libre Baskerville', serif;
+    font-size: 48px;
+	font-weight: 600;
+}
+
+h3 {
+    color: rgba(28, 51, 74, 1);
+    font-family: 'Libre Baskerville', serif;
+    font-size: 40px;
+}
+
+html {
+	scroll-behavior: smooth;
 }
 </style>

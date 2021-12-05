@@ -6,6 +6,7 @@
             <a class="navbar-brand" href="/#">
                 <img src="../assets/newLogo.svg" alt="">
             </a>
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -16,13 +17,13 @@
                         <a class="nav-link" href="#">Início</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">O que fazemos</a>
+                        <a class="nav-link" href="/#whatWeDo">O que fazemos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Recursos</a>
                     </li>
                     <li class="nav-item ml-2">
-                        <a href="#">
+                        <a href="https://libreclass.com/login">
                             <div type="button" class="d-none d-lg-block small-primary-button">Login</div>
                             <span class="d-block d-lg-none mt-2 cl-primary">Login</span>
                         </a>
@@ -70,24 +71,6 @@ export default {
     transition: all 0.5s;
     color: white;
     font-size: 20px;
-}
-
-h1 {
-    color: rgba(28, 51, 74, 1);
-    font-family: 'Libre Baskerville', serif;
-    font-size: 56px;
-}
-
-h2 {
-    color: rgba(28, 51, 74, 1);
-    font-family: 'Libre Baskerville', serif;
-    font-size: 48px;
-}
-
-h3 {
-    color: rgba(28, 51, 74, 1);
-    font-family: 'Libre Baskerville', serif;
-    font-size: 40px;
 }
 
 .subtitle {
