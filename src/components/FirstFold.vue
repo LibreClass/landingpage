@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="customContainer">
         <img class="first-fold-image" src="../assets/openBook5.svg" alt="">
 
         <nav class="mt-5 navbar navbar-expand-lg navbar-light bg-transparent">
@@ -32,7 +32,7 @@
             </div>
         </nav>
 
-        <section id="header" class="container py-4">
+        <section id="header" class="py-4">
             <div class="row align-items-center fold">
                 <div class="col-xs-12 col-lg-6 col-md-8 col-sm-8 text-center text-sm-left text-md-left text-lg-left">
                     <h1 class="font-weight-bold">Gestão da educação de forma  simplificada e livre</h1>

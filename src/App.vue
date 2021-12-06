@@ -1,19 +1,22 @@
 <template>
-  <div class="container" id="app">
+  <div id="app">
     <FirstFold />
 	<WhatWeDo />
+	<Resources />
   </div>
 </template>
 
 <script>
 import FirstFold from './components/FirstFold.vue';
 import WhatWeDo from './components/WhatWeDo.vue';
+import Resources from './components/Resources.vue';
 
 export default {
   name: 'App',
   components: {
     FirstFold,
 	WhatWeDo,
+	Resources,
   }
 }
 </script>
@@ -99,11 +102,65 @@ h2 {
 
 h3 {
     color: rgba(28, 51, 74, 1);
-    font-family: 'Libre Baskerville', serif;
     font-size: 40px;
 }
 
 html {
 	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+
+.customContainer {
+	padding-right: 32rem;
+	padding-left: 32rem;
+}
+
+@media (max-width: 2300px) {
+    .customContainer {
+		padding-right: 28rem;
+		padding-left: 28rem;
+	}
+}
+
+@media (max-width: 2200px) {
+    .customContainer {
+		padding-right: 24rem;
+		padding-left: 24rem;
+	}
+}
+
+@media (max-width: 1975px) {
+    .customContainer {
+		padding-right: 20rem;
+		padding-left: 20rem;
+	}
+}
+
+@media (max-width: 1850px) {
+    .customContainer {
+		padding-right: 16rem;
+		padding-left: 16rem;
+	}
+}
+
+@media (max-width: 1750px) {
+    .customContainer {
+		padding-right: 12rem;
+		padding-left: 12rem;
+	}
+}
+
+@media (max-width: 1600px) {
+    .customContainer {
+		padding-right: 8rem;
+		padding-left: 8rem;
+	}
+}
+
+@media (max-width: 1440px) {
+    .customContainer {
+		padding-right: 4rem;
+		padding-left: 4rem;
+	}
 }
 </style>

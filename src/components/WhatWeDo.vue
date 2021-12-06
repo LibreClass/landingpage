@@ -1,5 +1,5 @@
 <template>
-    <div class="mb-5" id="whatWeDo">
+    <div class="mb-5 customContainer" id="whatWeDo">
         <h2 class="mb-5">O que fazemos</h2>
 
         <div
