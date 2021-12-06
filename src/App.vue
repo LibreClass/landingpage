@@ -3,6 +3,7 @@
     <FirstFold />
 	<WhatWeDo />
 	<Resources />
+	<Footer />
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import FirstFold from './components/FirstFold.vue';
 import WhatWeDo from './components/WhatWeDo.vue';
 import Resources from './components/Resources.vue';
+import Footer from './components/Footer.vue';
 
 export default {
   name: 'App',
@@ -17,6 +19,7 @@ export default {
     FirstFold,
 	WhatWeDo,
 	Resources,
+	Footer,
   }
 }
 </script>

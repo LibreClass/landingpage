@@ -220,4 +220,8 @@ export default {
 	min-width: 608px;
 	z-index: 2;
 }
+
+#whatWeDo {
+    padding-top: 50px;
+}
 </style>

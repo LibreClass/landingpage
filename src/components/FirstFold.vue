@@ -1,5 +1,5 @@
 <template>
-    <div class="customContainer">
+    <div class="customContainer" id="firstFold">
         <img class="first-fold-image" src="../assets/openBook5.svg" alt="">
 
         <nav class="mt-5 navbar navbar-expand-lg navbar-light bg-transparent">
@@ -14,13 +14,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="align-items-center navbar-nav ml-auto flex-row justify-content-between mt-4 mt-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Início</a>
+                        <a class="nav-link" href="#firstFold">Início</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/#whatWeDo">O que fazemos</a>
+                        <a class="nav-link" href="#whatWeDo">O que fazemos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Recursos</a>
+                        <a class="nav-link" href="#resources">Recursos</a>
                     </li>
                     <li class="nav-item ml-2">
                         <a href="https://libreclass.com/login">

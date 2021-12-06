@@ -170,11 +170,15 @@ export default {
 }
 
 .resources-sections {
-  scroll-snap-align: start;
+    scroll-snap-align: start;
 }
 
 #resources {
     margin-top: 150px;
     margin-bottom: 200px;
+}
+
+#resources {
+    padding-top: 50px;
 }
 </style>
