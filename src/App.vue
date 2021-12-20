@@ -20,11 +20,33 @@ export default {
 		WhatWeDo,
 		Resources,
 		Footer,
-	}
+	},
+
+	mounted() {
+		var scrollableElement = document.getElementById('go');
+		scrollableElement.addEventListener('wheel', checkScrollDirection);
+
+		function checkScrollDirection(event) {
+			if (checkScrollDirectionIsDown(event)) {
+				setTimeout(function() {
+					document.getElementById('footerBall').scrollIntoView();
+				}, 100);
+			}
+		}
+
+		function checkScrollDirectionIsDown(event) {
+			if (event.wheelDelta) {
+				return event.wheelDelta < 0;
+			}
+			return event.deltaY > 0;
+		}
+	},
 }
 </script>
 
 <style>
+
+/* Reset CSS */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -46,7 +68,6 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -71,11 +92,14 @@ table {
 	border-spacing: 0;
 }
 
+/* */
+
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Poppins:ital,wght@0,400;0,500;1,200&display=swap');
 
 
 body { 
 	font-family: 'Poppins';
+	overflow-x: hidden !important;
 }
 
 a {
@@ -113,7 +137,7 @@ html {
 	overflow-x: hidden;
 }
 
-.customContainer {
+.custom-container {
 	padding-right: 32rem;
 	padding-left: 32rem;
 }
@@ -122,65 +146,88 @@ html {
 	.footerContainer {
 		margin-top: calc(80px + 2vw) !important;
 	}
+
+	.first-fold-image {
+		width: 80% !important;
+	}
 }
 
 @media (max-width: 2300px) {
-	.customContainer {
+	.custom-container {
 		padding-right: 28rem;
 		padding-left: 28rem;
+	}
+
+	.first-fold-image {
+		width: 85% !important;
 	}
 }
 
 @media (max-width: 2200px) {
-	.customContainer {
+	.first-fold-image {
+		width: 95% !important;
+	}
+
+	.custom-container {
 		padding-right: 24rem;
 		padding-left: 24rem;
 	}
 
 	.centerImageContainer {
 		zoom: 0.9;
+		-moz-transform: scale(0.9) !important;
 		padding: 198px 80px;
 	}
 
 	.institutionFlag {
 		zoom: 0.8;
+		-moz-transform: scale(0.8) !important;
 	}
 
 	.teacherFlag {
 		zoom: 0.8;
+		-moz-transform: scale(0.8) !important;
 	}
 }
 
 @media (max-width: 1975px) {
-	.customContainer {
+	.custom-container {
 		padding-right: 20rem;
 		padding-left: 20rem;
 	}
 }
 
 @media (max-width: 1850px) {
-	.customContainer {
+	.custom-container {
 		padding-right: 16rem;
 		padding-left: 16rem;
 	}
 }
 
 @media (max-width: 1750px) {
-	.customContainer {
+	.custom-container {
 		padding-right: 12rem;
 		padding-left: 12rem;
 	}
 }
 
 @media (max-width: 1600px) {
-	.customContainer {
+	.custom-container {
 		padding-right: 8rem;
 		padding-left: 8rem;
+	}
+
+	.first-fold-image {
+		width: 100% !important;
 	}
 }
 
 @media (max-width: 1440px) {
-	.customContainer {
+	.first-fold-image {
+		width: 110% !important;
+	}
+
+	.custom-container {
 		padding-right: 4rem;
 		padding-left: 4rem;
 	}
@@ -201,24 +248,28 @@ html {
 @media (max-width: 1500px) {
 	.img-mask {
 		zoom: 0.7 !important;
+		-moz-transform: scale(0.7) !important;
 		clip-path: polygon(0.5% 0.6%, 99.5% 0.5%, 99.5% 99.5%, 0.4% 99.5%) !important;
 	}
 
-	.overflow-controller  {
+	.overflow-controller-lg  {
 		max-height: 450px;
 	}
 
 	.centerImageContainer {
 		zoom: 0.8;
+		-moz-transform: scale(0.8) !important;
 		padding: 212px 80px;
 	}
 
 	.institutionFlag {
 		zoom: 0.75;
+		-moz-transform: scale(0.75) !important;
 	}
 
 	.teacherFlag {
 		zoom: 0.75;
+		-moz-transform: scale(0.75) !important;
 	}
 
 	.whatWeDo {
@@ -229,24 +280,28 @@ html {
 @media (max-width: 1250px) {
 	.img-mask {
 		zoom: 0.65 !important;
+		-moz-transform: scale(0.65) !important;
 		clip-path: polygon(0.5% 0.7%, 99.5% 0.7%, 99.5% 99.5%, 0.4% 99%) !important;
 	}
 
-	.overflow-controller  {
-		max-height: 450px;
+	.overflow-controller-lg {
+		max-height: 430px;
 	}
 
 	.centerImageContainer {
 		zoom: 0.7;
+		-moz-transform: scale(0.7) !important;
 		padding: 219px 60px;
 	}
 
 	.institutionFlag {
 		zoom: 0.7;
+		-moz-transform: scale(0.7) !important;
 	}
 
 	.teacherFlag {
 		zoom: 0.7;
+		-moz-transform: scale(0.7) !important;
 	}
 
 	.whatWeDo {
@@ -259,16 +314,22 @@ html {
 }
 
 @media (max-width: 1150px) {
-	.img-mask {
-		zoom: 0.6 !important;
+	.first-fold-image {
+		width: 130% !important;
 	}
 
-	.overflow-controller  {
+	.img-mask {
+		zoom: 0.6 !important;
+		-moz-transform: scale(0.6) !important;
+	}
+
+	.overflow-controller-lg  {
 		max-height: 400px;
 	}
 
 	.centerImageContainer {
 		zoom: 0.62;
+		-moz-transform: scale(0.9) !important;
 		padding: 208px 48px;
 		margin-top: -60px;
 	}
@@ -279,10 +340,12 @@ html {
 
 	.institutionFlag {
 		zoom: 0.58;
+		-moz-transform: scale(0.58) !important;
 	}
 
 	.teacherFlag {
 		zoom: 0.58;
+		-moz-transform: scale(0.58) !important;
 	}
 
 	.whatWeDo {
@@ -294,13 +357,17 @@ html {
 		max-width: 360px;
 	}
 
+	.segment-text {
+		max-width: 380px;
+	}
+
 	.segmentTitle {
 		font-size: 32px;
 		max-width: 360px;
 	}
 
 	.list {
-		font-size: 15px;
+		font-size: 16px;
 	}
 
 	.bottom-menu-link {
@@ -317,14 +384,220 @@ html {
 }
 
 @media (max-width: 1000px) {
-	.img-mask {
-		zoom: 0.55 !important;
+	.first-fold-image {
+		width: 140% !important;
 	}
 
-	.overflow-controller  {
-		max-height: 400px;
+	.img-mask {
+		zoom: 0.55 !important;
+		-moz-transform: scale(0.55) !important;
+	}
+
+	.overflow-controller-sm {
+		display: block;
+	}
+
+	.overflow-controller-lg {
+		display: none;
+	}
+
+	.img-description {
+		max-width: 610px;
+	}
+
+	.segment-text {
+		max-width: 100%;
+	}
+
+	.footer-img {
+		display: none;
+	}
+
+	.small-footer {
+		display: block !important;
+		height: 320px !important;
+	}
+
+	.verticalLogo {
+		width: calc(15vw + 10%) !important;
+	}
+
+	.institutionFlag {
+		display: none;
+	}
+
+	.teacherFlag {
+		display: none;
+	}
+
+	.whatWeDoLargeContainer {
+		display: none;
+	}
+
+	.whatWeDoSmallContainer {
+		display: block;
 	}
 }
+
+
+@media (max-width: 769px) {
+	.first-fold-image {
+		width: 160% !important;
+	}
+
+	.img-mask {
+		zoom: 0.5 !important;
+		-moz-transform: scale(0.5) !important;
+	}
+
+	.segment-text {
+		font-size: 18px;
+		max-width: 500px;
+	}
+
+	.img-description h3 {
+		font-size: 28px;
+		font-weight: 500;
+	}
+
+	.overflow-controller-sm {
+		max-height: 548px;
+	}
+
+	.bottom-menu {
+		text-align: center;
+	}
+
+	.verticalLogo {
+		margin-bottom: 32px;
+	}
+
+	.footerContainer {
+		justify-content: space-around;
+	}
+}
+
+@media (max-width: 480px) {
+	.first-fold-image {
+		width: 200% !important;
+	}
+
+	.img-mask {
+		zoom: 0.4 !important;
+		-moz-transform: scale(0.4) !important;
+	}
+
+	.segment-text {
+		font-size: 16px;
+	}
+
+	.img-description h3 {
+		font-size: 28px;
+	}
+
+	.custom-container {
+		padding-right: 2.5rem;
+		padding-left: 2.5rem;
+		overflow-x: hidden;
+		/* overflow-y: hidden; */
+	}
+
+	.custom-container::-webkit-scrollbar {
+		width: 0;
+		background: transparent;
+	}
+
+	.overflow-controller-sm {
+		max-height: 488px;
+	}
+
+	.footerContainer {
+		width: auto !important;
+	}
+
+	.small-footer {
+		width: 108%;
+		/* height: 400px !important; */
+	}
+
+	.verticalLogo {
+		width: calc(25vw + 10%) !important;
+	}
+
+	.whatWeDoSmallContainer {
+		max-height: 532px;
+	}
+
+	.verticalImg {
+		display: block !important;
+		zoom: 0.3;
+	}
+
+	.horizontalImg {
+		display: none;
+	}
+}
+
+
+@media (max-width: 415px) {
+	.overflow-controller-sm {
+		max-height: 515px;
+	}
+
+	.whatWeDoSmallContainer {
+		max-height: 570px;
+	}
+}
+
+
+
+@media (max-width: 370px) {
+	.img-mask {
+		zoom: 0.35 !important;
+		-moz-transform: scale(0.35) !important;
+	}
+
+	.segment-text {
+		font-size: 16px;
+	}
+
+	.img-description h3 {
+		font-size: 28px;
+	}
+
+	.custom-container {
+		padding-right: 2rem;
+		padding-left: 2rem;
+		overflow-x: hidden;
+	}
+
+	.custom-container::-webkit-scrollbar {
+		width: 0;
+		background: transparent;
+	}
+
+	.overflow-controller-sm {
+		max-height: 514px;
+	}
+
+	.whatWeDoSmallContainer {
+		max-height: 585px;
+	}
+}
+
+@media (max-height: 568px) {
+	.overflow-controller-sm {
+		scroll-snap-type: none;
+		max-height: 100%;
+	}
+
+	.whatWeDoSmallContainer {
+		scroll-snap-type: none;
+		max-height: 100%;
+	}
+}
+
+
 
 .nav-link:hover {
 	color: #2166af !important;

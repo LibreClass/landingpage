@@ -1,9 +1,9 @@
 <template>
-	<div class="mb-5 customContainer" id="whatWeDo">
+	<div class="mb-5 custom-container" id="whatWeDo">
 		<h2 class="mb-5">O que fazemos</h2>
 
 		<div
-			class="containerInstitution"
+			class="whatWeDoLargeContainer containerInstitution"
 		>
 			<div class="whatWeDo">
 				<p class="segmentTitle mb-5">Para {{ $data[currentlyActive].title }}</p>
@@ -55,6 +55,51 @@
 				</div>
 			</div>
 		</div>
+
+		<div
+			class="whatWeDoSmallContainer"
+		>
+			<div
+				class="mb-5 what-we-do-snap-controller"
+			>
+				<p class="segmentTitle mb-5">Para {{ $data['institutionData'].title }}</p>
+
+				<div class="mb-4">
+					<img class="img-mask" src="../assets/institution.png" alt="">
+				</div>
+
+				<p class="segmentText mb-3">
+					{{ $data['institutionData'].text }}
+				</p>
+
+				<ul class="list mt-4">
+					<li class="ml-3 mt-2" v-for="topic in $data['institutionData'].topics" :key="topic">
+						{{ topic }}
+					</li>
+				</ul>
+			</div>
+
+			<div
+				class="what-we-do-snap-controller"
+			>
+				<p class="segmentTitle mb-5">Para {{ $data['teacherData'].title }}</p>
+
+				<div class="mb-4">
+					<img class="img-mask" src="../assets/class.png" alt="">
+				</div>
+
+				<p class="segmentText mb-3">
+					{{ $data['teacherData'].text }}
+				</p>
+
+				<ul class="list mt-4">
+					<li class="ml-3 mt-2" v-for="topic in $data['teacherData'].topics" :key="topic">
+						{{ topic }}
+					</li>
+				</ul>
+			</div>
+
+		</div>
 	</div>
 </template>
 
@@ -68,7 +113,7 @@ export default {
 					acadêmicos da escola de forma muito mais fácil, tendo acesso a recursos como:`,
 				topics: [
 					`Cadastro de professores`,
-					`Gerenciamento de unidades e informações sobre as disciplinas lecionadas`,
+					`Gerenciamento de unidades e informações sobre disciplinas lecionadas`,
 					`Gerenciamento de alunos`,
 					`Dashboard com informações consolidadas`,
 				],
@@ -154,6 +199,7 @@ export default {
 
 .teacherFlag {
 	zoom: 0.9;
+	-moz-transform: scale(0.9) !important;
 	cursor: pointer;
 	padding: 24px 42px;
 	clip-path: url(#flag);
@@ -176,6 +222,7 @@ export default {
 
 .institutionFlag {
 	zoom: 0.9;
+	-moz-transform: scale(0.9) !important;
 	cursor: pointer;
 	padding: 24px 42px;
 	clip-path: url(#flag);
@@ -229,5 +276,27 @@ export default {
 
 #whatWeDo {
 	padding-top: 50px;
+}
+
+.whatWeDoSmallContainer {
+	display: none;
+	max-height: 550px;
+	overflow: scroll;
+	overflow-x: hidden;
+
+	scroll-snap-type: y mandatory;
+	scroll-behavior: smooth;
+
+	margin-bottom: 50px;
+	scrollbar-width: none;
+}
+
+.whatWeDoSmallContainer::-webkit-scrollbar {
+	width: 0;
+	background: transparent;
+}
+
+.what-we-do-snap-controller {
+	scroll-snap-align: start;
 }
 </style>
