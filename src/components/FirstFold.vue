@@ -24,7 +24,7 @@
 						<a class="nav-link" href="#resources">Recursos</a>
 					</li>
 					<li class="nav-item ml-2">
-						<a href="https://libreclass.com/login">
+						<a href="https://demonstracao.libreclass.com/login">
 							<div type="button" class="d-none d-lg-block small-primary-button">Login</div>
 							<span class="d-block d-lg-none mt-2 cl-primary">Login</span>
 						</a>
