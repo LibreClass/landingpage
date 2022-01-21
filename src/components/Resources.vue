@@ -75,7 +75,7 @@
 					<div
 						class="img-container"
 					>
-						<img class="img-mask" src="../assets/diary.gif" alt="">
+						<img class="img-mask" src="../assets/grades.gif" alt="">
 					</div>
 			</div>
 		</div>

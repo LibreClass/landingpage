@@ -8,6 +8,9 @@
 					<a href="#">
 						<img class="verticalLogo" src="../assets/verticalLogo.svg" alt="Libreclass Logo">
 					</a>
+					<div class="footer-mail">
+						libreclass.contact@gmail.com
+					</div>
 				</div>
 
 				<div
@@ -19,7 +22,7 @@
 				<div>
 					<ul class="bottom-menu nav flex-column">
 						<li class="nav-item bottom-menu-link">
-							<a class="nav-link active" href="#firstFold">Início</a>
+							<a class="nav-link active" href="#first-fold">Início</a>
 						</li>
 						<li class="nav-item bottom-menu-link">
 							<a class="nav-link" href="#whatWeDo">O que fazemos</a>
@@ -56,7 +59,7 @@ export default {}
 .footer-img {
 	position: absolute;
 	width: 100%;
- }
+}
 
 .bottom-menu-link {
 	margin-bottom: 24px;
@@ -81,7 +84,13 @@ export default {}
 }
 
 .verticalLogoContainer {
-	text-align: center;
+	width: min-content;
+}
+
+.footer-mail {
+	margin-top: 8px;
+	color: #697580;
+	font-weight: 500;
 }
 
 </style>

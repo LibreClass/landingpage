@@ -1,7 +1,5 @@
 <template>
 	<div class="custom-container" id="first-fold">
-		<img class="first-fold-image" src="../assets/openBook.svg" alt="">
-
 		<nav class="mt-5 navbar navbar-expand-lg navbar-light bg-transparent">
 			<a class="navbar-brand" href="/#">
 				<img class="horizontal-img" src="../assets/newLogo.svg" alt="">
@@ -13,7 +11,7 @@
 			</button>
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="align-items-center navbar-nav ml-auto flex-row justify-content-between mt-4 mt-lg-0">
+				<ul class="align-items-md-center align-items-start navbar-nav ml-auto flex-md-row flex-column justify-content-between mt-4 mt-lg-0">
 					<li class="nav-item active">
 						<a class="nav-link" href="#first-fold">Início</a>
 					</li>
@@ -23,10 +21,10 @@
 					<li class="nav-item">
 						<a class="nav-link" href="#resources">Recursos</a>
 					</li>
-					<li class="nav-item ml-2">
-						<a href="https://libreclass.com/login">
+					<li class="nav-item ml-md-2 ml-0">
+						<a href="https://demonstracao.libreclass.com/login">
 							<div type="button" class="d-none d-lg-block small-primary-button">Login</div>
-							<span class="d-block d-lg-none mt-2 cl-primary">Login</span>
+							<span class="d-block d-lg-none cl-primary mt-md-0 mt-2">Login</span>
 						</a>
 					</li>
 				</ul>
@@ -34,12 +32,20 @@
 		</nav>
 
 		<section id="header" class="py-4">
-			<div class="row align-items-center fold">
-				<div class="col-xs-12 col-lg-8 col-md-8 col-sm-8 text-center text-sm-left text-md-left text-lg-left">
-					<h1 class="font-weight-bold">Gestão da educação de forma  simplificada e livre</h1>
+			<div
+				class="d-flex"
+			>
+				<div class="row align-items-center fold">
+					<div class="col-xs-12 col-lg-10 col-md-10 col-sm-12">
+						<div>
+							<img class="m-sm-0 m-auto d-lg-none d-block first-fold-img-vertical" src="../assets/firstFoldImg.svg" alt="Libreclass Logo">
+							<h1 class="font-weight-bold">Gestão da educação de forma  simplificada e livre</h1>
+						</div>
 
-					<p class="subtitle mt-4">Simplifique a gestão da educação na sua escola facilitando o trabalho de gestores e professores, economizando recursos.</p>
+						<p class="subtitle mt-4">Simplifique a gestão da educação na sua escola facilitando o trabalho de gestores e professores, economizando recursos.</p>
+					</div>
 				</div>
+				<img class="d-lg-block d-none first-fold-img" src="../assets/firstFoldImg.svg" alt="Libreclass Logo">
 			</div>
 		</section>
 
@@ -54,16 +60,6 @@ export default {
 
 
 <style scoped>
-.first-fold-image {
-	position: absolute;
-	top: 0px;
-	width: 100%;
-	left: 0; 
-	right: 0; 
-	margin-left: auto; 
-	margin-right: auto; 
-}
-
 .small-primary-button {
 	border-radius: 50px;
 	padding: 10px 24px;
@@ -96,13 +92,19 @@ export default {
 	}
 }
 
-@media (min-width: 768px) {
-	.fold {
-		padding: 150px 0px;
-	}
-}
-
 .vertical-img {
 	display: none;
+	margin-right: -132px;
+}
+
+.first-fold-img {
+	width: 55%;
+	z-index: 999999999;
+	margin-right: -85px;
+}
+
+.first-fold-img-vertical {
+	z-index: 999999999;
+	width: 75%;
 }
 </style>

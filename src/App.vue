@@ -243,6 +243,19 @@ html {
 	.bottom-menu-link {
 		margin-bottom: 20px !important;
 	}
+
+	.first-fold-img {
+		width: 52% !important;
+		margin-right: -65px !important;
+	}
+
+	h1 {
+		font-size: 40px;
+	}
+
+	.subtitle  {
+		font-size: 22px !important;
+	}
 }
 
 @media (max-width: 1500px) {
@@ -310,6 +323,11 @@ html {
 
 	.bottom-menu-link {
 		margin-bottom: 16px !important;
+	}
+
+	.first-fold-img {
+		width: 55% !important;
+		margin-right: -75px !important;
 	}
 }
 
@@ -381,11 +399,23 @@ html {
 	.bottom-menu {
 		font-size: 18px !important;
 	}
+
+	h1 {
+		font-size: 36px;
+	}
+
+	.subtitle  {
+		font-size: 20px !important;
+	}
 }
 
 @media (max-width: 1000px) {
 	.first-fold-image {
 		width: 140% !important;
+	}
+
+	.verticalLogoContainer {
+		text-align: center;
 	}
 
 	.img-mask {
@@ -468,12 +498,30 @@ html {
 		text-align: center;
 	}
 
-	.verticalLogo {
-		margin-bottom: 32px;
-	}
-
 	.footerContainer {
 		justify-content: space-around;
+	}
+
+	.first-fold-img-vertical {
+		width: 85% !important;
+	}
+}
+
+@media (max-width: 568px) {
+	.first-fold-img-vertical {
+		width: 100% !important;
+	}
+
+	h1 {
+		font-size: 32px;
+	}
+
+	.subtitle  {
+		font-size: 18px !important;
+	}
+
+	.bottom-menu {
+		margin-top: 32px;
 	}
 }
 
@@ -496,10 +544,9 @@ html {
 	}
 
 	.custom-container {
-		padding-right: 2.5rem;
-		padding-left: 2.5rem;
+		padding-right: 2.2rem;
+		padding-left: 2.2rem;
 		overflow-x: hidden;
-		/* overflow-y: hidden; */
 	}
 
 	.custom-container::-webkit-scrollbar {
@@ -511,13 +558,8 @@ html {
 		max-height: 488px;
 	}
 
-	.footerContainer {
-		width: auto !important;
-	}
-
 	.small-footer {
-		width: 108%;
-		/* height: 400px !important; */
+		width: 118% !important;
 	}
 
 	.verticalLogo {
@@ -540,12 +582,33 @@ html {
 
 
 @media (max-width: 415px) {
+	.first-fold-img-vertical {
+		width: 110% !important;
+	}
+
 	.overflow-controller-sm {
 		max-height: 515px;
 	}
 
 	.whatWeDoSmallContainer {
 		max-height: 570px;
+	}
+
+	.custom-container {
+		padding-right: 1.2rem;
+		padding-left: 1.2rem;
+		overflow-x: hidden;
+	}
+}
+
+@media (max-width: 430px) {
+	.vertical-img {
+		display:block !important;
+		width: 64%;
+	}
+
+	.horizontal-img {
+		display: none;
 	}
 }
 
@@ -563,12 +626,6 @@ html {
 
 	.img-description h3 {
 		font-size: 28px;
-	}
-
-	.custom-container {
-		padding-right: 2rem;
-		padding-left: 2rem;
-		overflow-x: hidden;
 	}
 
 	.custom-container::-webkit-scrollbar {
@@ -596,8 +653,6 @@ html {
 		max-height: 100%;
 	}
 }
-
-
 
 .nav-link:hover {
 	color: #2166af !important;
